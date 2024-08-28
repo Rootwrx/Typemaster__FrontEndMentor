@@ -14,19 +14,13 @@ html {
   box-sizing: border-box;
 }
 
-body {
-  font-weight: 400;
-  line-height: 1.6;
-  overflow-x: hidden;
-  font-style: normal;
-}
+
 img {
   background-repeat: no-repeat;
   max-width: 100%;
   height: auto;
   font-style: italic;
   background-size: cover;
-  // vertical-align: center;
   display: block;
   object-fit: cover;
   user-select: none;
@@ -44,19 +38,15 @@ input {
 
 a {
   text-decoration: none;
-  text-transform: capitalize;
 }
 
-button,
+button,a,
 h1,
 h2,
-h3,
-h4,
-h5,
-h6 {
+h3 {
   text-transform: capitalize;
 }
 button {
-  cursor: pointer;
   display: block;
+  font-family: inherit;
 }

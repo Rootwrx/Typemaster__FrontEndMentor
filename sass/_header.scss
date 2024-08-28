@@ -1,0 +1,11 @@
+.header {
+  .topnav {
+    a {
+        grid-column: 2;
+    }
+    .button {
+      grid-column: 3 / -2;
+      justify-self: end;
+    }
+  }
+}
