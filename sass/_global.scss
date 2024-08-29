@@ -87,13 +87,19 @@ p {
   grid-template-columns: repeat(2, auto);
   grid-template-rows: repeat(3, auto);
   align-items: center;
-  gap: 32px;
-  justify-items: start;
+  gap:32px 10px;
+
   > * {
     grid-column: 1/-1;
   }
   .button,
   .info {
     grid-column: span 1;
+  }
+  .info{
+    justify-self: end
+  };
+  .button{
+    justify-self: start;
   }
 }
