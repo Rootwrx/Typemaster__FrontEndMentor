@@ -1,0 +1,34 @@
+.button {
+  font-weight: var(--fw-bold);
+  font-size: 1rem;
+  padding: 16px 26px;
+  line-height: 1.625;
+  text-transform: uppercase;
+  border-radius: 8px;
+  border: 0;
+  transition-duration: 150ms;
+  transition-property: background-color, color;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &.orange {
+    background-color: var(--orange);
+    color: var(--white);
+
+    &:hover {
+      background-color: var(--orange-lt);
+    }
+  }
+
+  &.blue {
+    background-color: var(--gray-lt);
+    color: var(--blue);
+
+    &:hover {
+      background-color: var(--blue);
+      color: var(--gray-lt);
+    }
+  }
+}

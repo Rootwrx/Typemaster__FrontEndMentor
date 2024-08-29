@@ -1,11 +1,26 @@
 .header {
   .topnav {
+    align-items: center;
+
     a {
-        grid-column: 2;
+      grid-column: 2;
     }
+
     .button {
       grid-column: 3 / -2;
       justify-self: end;
     }
+  }
+}
+
+// line height(px) = fontsize * 1.5
+.hero {
+  padding-block: var(--space-med) var(--space-sm);
+  row-gap: var(--space-med);
+
+  .headline {
+    font-size: 3rem;
+    font-size: clamp(3rem, 0.97vw + 2.773rem, 3.5rem);
+    line-height: clamp(3.125rem, 5.576vw + 1.818rem, 6rem);
   }
 }

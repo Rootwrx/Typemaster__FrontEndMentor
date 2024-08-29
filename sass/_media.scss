@@ -10,13 +10,12 @@
 /* Tablet */
 @include media(tablet) {
   .grid-main {
-    --gap: 30px;
     /// 2 => 2 gaps between 1-2 columns and  4-5 columns
     grid-template-columns:
       10px // space on left 10px + 30px gap
-      repeat(6, calc((100% - 80px - var(--gap) * 5) / 6))
+      repeat(6, calc((100% - 80px - 30px * 5) / 6))
       10px; // space on right 10px + 30px gap
-    gap: var(--gap);
+    column-gap: 30px;
   }
 
   .hero-image {
@@ -31,13 +30,12 @@
 @include media(desktop) {
   // 1fr  max(1200px) 1fr => centered on the screen
   .grid-main {
-    --gap: 30px;
     /// 2 => 2 gaps between 1-2 columns and  4-5 columns
     grid-template-columns:
       1fr // take the remaining space
-      repeat(12, calc((75rem - 80px - var(--gap) * 11) / 12))
+      repeat(12, calc((75rem - (30px * 11)) / 12))
       1fr; // take the remaining space
-    gap: var(--gap);
+    gap: 30px;
   }
 
   .hero-image {
