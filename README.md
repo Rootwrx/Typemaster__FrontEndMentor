@@ -14,15 +14,14 @@ This is a solution to the [Typemaster pre-launch landing page challenge on Front
   - [Useful resources](#useful-resources)
 - [Author](#author)
 
-
 ### Screenshot
 
 ![](./screenshot/screenshot-desktop.png)
 
 ### Links
 
-- Solution URL: [Frontend Mentor Solution](https://www.frontendmentor.io/solutions/typemaster-prelaunch-land-page-vanilla-css-burger-menu-css-only-6J_gghd6Xz)
-- Live Site URL: [Live Site at Vercel](https://typemaster-landing-page-eight.vercel.app/)
+- Live Site URL: [Live Site at Vercel](https://typemaster-landing-page-fem.vercel.app/)
+
 ## My process
 
 ### Built with
@@ -42,8 +41,6 @@ This challenge was amazing to sharp my 'grid-template-area' skills and work with
 
 - [Grid Areas by THE Net Ninja](https://www.youtube.com/watch?v=tPosqmwIx0w) - An amazing tutorial to learn how to work and build grid structures with grid template areas.
 - [Grid Areas by Kevin Powell](https://www.example.com) - A complete and in depth guide about GRID and grid-template-areas.
-
-
 
 ## Author
 

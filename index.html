@@ -11,7 +11,6 @@
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
 
     <link rel="stylesheet" href="sass/main.scss" />
-    <script type="module" src="/main.js"></script>
 
     <title>Frontend Mentor | Typemaster pre-launch landing page</title>
   </head>
@@ -46,11 +45,23 @@
           <button class="button orange">Pre-order now</button>
           <p class="info"><strong>Release on 5/27</strong></p>
         </div>
-        <img
-          class="hero-image"
-          src="tablet/image-keyboard.jpg"
-          alt="keyboard image"
-        />
+
+        <picture class="hero-image">
+          <source
+            media="(width >= 75rem)"
+            srcset="desktop/image-keyboard.jpg"
+          />
+          <source
+            media="(width >= 43.75rem)"
+            srcset="tablet/image-keyboard.jpg"
+          />
+          <img
+            src="mobile/image-keyboard.jpg"
+            width="1080"
+            height="960"
+            alt="keyboard image"
+          />
+        </picture>
 
         <div class="gray-block"></div>
       </section>
