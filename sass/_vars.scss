@@ -46,9 +46,21 @@ $grid-breakpoints: (
   --space-sm: 24px;
   --space-med: 64px;
   --space-lg: 120px;
+
+  @include media(tablet) {
+    --space-sm: 40px;
+    --space-med: 72px;
+  }
+
+  /* Font Family */
+
   --ff: "Barlow";
 
+  /* Font Weight */
   --fw-medium: 500;
   --fw-bold: 700;
   --fw-black: 900;
+
+  /* Image border-raduis */
+  --br-5: 20px;
 }
