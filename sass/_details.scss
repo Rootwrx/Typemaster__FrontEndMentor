@@ -54,6 +54,7 @@
 
       text-align: left;
     }
+
     @include media(desktop) {
       flex-direction: column;
       grid-column: 11 / -2;

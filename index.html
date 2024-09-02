@@ -11,16 +11,18 @@
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
 
     <link rel="stylesheet" href="sass/main.scss" />
-
+    <script src="./main.js" defer></script>
     <title>Frontend Mentor | Typemaster pre-launch landing page</title>
   </head>
 
-  <body>
+  <body
+    onload="document.querySelector('.year').textContent = new Date().getFullYear();"
+  >
     <!-- Header -->
 
     <header class="header">
       <nav class="topnav grid-main">
-        <a href="/">
+        <a href="/" class="animate animate-slide-left">
           <img
             src="/shared/logo.svg"
             width="40"
@@ -29,14 +31,16 @@
           />
         </a>
 
-        <button class="button blue">Pre-order now</button>
+        <button class="button blue animate animate-slide-right">
+          Pre-order now
+        </button>
       </nav>
     </header>
 
     <!-- Main -->
     <main>
       <section class="grid-main hero">
-        <div class="hero-text">
+        <div class="hero-text animate animate-fade-in">
           <h1 class="headline">Typemaster keyboard</h1>
           <p class="description">
             Improve your productivity and gaming without breaking the bank.
@@ -46,7 +50,7 @@
           <p class="info"><strong class="caps">Release on 5/27</strong></p>
         </div>
 
-        <picture class="hero-image flush-right">
+        <picture class="hero-image flush-right animate animate-scale">
           <source
             media="(width >= 75rem)"
             srcset="desktop/image-keyboard.jpg"
@@ -63,15 +67,15 @@
           />
         </picture>
 
-        <div class="gray-block"></div>
+        <div class="gray-block animate animate-slide-right"></div>
       </section>
 
       <!-- Details sections -->
 
       <section class="grid-main details">
-        <div class="gray-block"></div>
+        <div class="gray-block animate animate-slide-left"></div>
 
-        <picture class="details-image flush-left">
+        <picture class="details-image flush-left animate animate-scale">
           <source
             media="(width >= 75rem)"
             srcset="desktop/image-phone-and-keyboard.jpg"
@@ -87,7 +91,7 @@
             alt="keyboard image"
           />
         </picture>
-        <picture class="details-image">
+        <picture class="details-image animate animate-scale">
           <source
             media="(width >= 75rem)"
             srcset="desktop/image-glass-and-keyboard.jpg"
@@ -104,7 +108,7 @@
           />
         </picture>
 
-        <div class="details-text">
+        <div class="details-text animate animate-fade-in">
           <h2 class="headline">Mechanical wireless keyboard</h2>
           <p class="description small">
             The Typemaster keyboard boasts top-notch build and practical design.
@@ -113,21 +117,74 @@
           </p>
         </div>
       </section>
+
+      <!-- Features section  -->
+
+      <section class="grid-main features">
+        <div class="feature animate animate-slide-left">
+          <div class="icon">
+            <img
+              src="shared/icon-compatible.svg"
+              alt=""
+              width="32"
+              height="32"
+            />
+          </div>
+          <h3>Highly compatible</h3>
+          <p>
+            Easy to use and works well with all major computer brands, gaming
+            consoles and mobile devices <strong>Plug & play</strong>, no
+            installation or driver needed.
+          </p>
+        </div>
+
+        <div class="feature animate animate-slide-right">
+          <div class="icon">
+            <img
+              src="shared/icon-bluetooth.svg"
+              alt=""
+              width="32"
+              height="32"
+            />
+          </div>
+          <h3>Wireless with bluetooth</h3>
+          <p>
+            <strong> Powerful 2.4G RF technology</strong> allows you to connect
+            the cordless keyboard from up to 30ft away. Simply plug the unifying
+            receiver into your computer.
+          </p>
+        </div>
+
+        <div class="feature animate animate-slide-left">
+          <div class="icon">
+            <img src="shared/icon-battery.svg" alt="" width="32" height="32" />
+          </div>
+          <h3>High capacity batteryh</h3>
+          <p>
+            Equipped with a long-lasting built-in battery, you’ll never have to
+            spend a dime on replaceable ones. Enjoy
+            <strong>40 hours of usage</strong> time between charges.
+          </p>
+        </div>
+
+        <div class="feature animate animate-slide-right">
+          <div class="icon">
+            <img src="shared/icon-light.svg" alt="" width="32" height="32" />
+          </div>
+          <h3>RGB backlit modes</h3>
+          <p>
+            Choose from <strong>4 backlight brightness levels </strong> and
+            adjustable breathing speed. Each key glows intensely in the dark and
+            helps you type in low light conditions.
+          </p>
+        </div>
+      </section>
     </main>
 
     <!-- Footer -->
 
-    <footer></footer>
-    <!-- 
-      . Highly compatible Easy to use and works well with all major
-    computer brands, gaming consoles and mobile devices. Plug & play, no
-    installation or driver needed. Wireless with bluetooth Powerful 2.4G RF
-    technology allows you to connect the cordless keyboard from up to 30ft away.
-    Simply plug the unifying receiver into your computer. High capacity battery
-    Equipped with a long-lasting built-in battery, you’ll never have to spend a
-    dime on replaceable ones.  Enjoy 40 hours of usage time between charges. RGB
-    backlit modes Choose from 4 backlight brightness levels and adjustable
-    breathing speed. Each key glows intensely in the dark and helps you type in
-    low light conditions. Typemaster 2021 | All Rights Reserved -->
+    <footer class="animate animate-fade-in">
+      <p>Typemaster <span class="year"></span> All Rights Reserved</p>
+    </footer>
   </body>
 </html>

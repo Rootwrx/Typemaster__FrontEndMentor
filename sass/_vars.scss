@@ -50,6 +50,11 @@ $grid-breakpoints: (
   @include media(tablet) {
     --space-sm: 40px;
     --space-med: 72px;
+    --space-lg: 140px;
+  }
+
+  @include media(desktop) {
+    --space-lg: 160px;
   }
 
   /* Font Family */

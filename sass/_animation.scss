@@ -1,0 +1,72 @@
+// Variables
+$animation-duration: 1s;
+$animation-easing: ease;
+
+// Mixins
+@mixin transition($properties...) {
+  transition-property: $properties;
+  transition-duration: $animation-duration;
+  transition-timing-function: $animation-easing;
+}
+
+/* Base animation class */
+
+.animate {
+  scale: 0.9 0.9;
+  opacity: 0;
+  @include transition(opacity, transform);
+
+  &.animated {
+    opacity: 1;
+    scale: 1 1;
+  }
+
+  /* Default vertical animation */
+  &:not([class*="animate-"]) {
+    transform: translateY(20px);
+
+    &.animated {
+      transform: translateY(0);
+    }
+  }
+
+  &-fade-in,
+  &-scale,
+  &-slide-left,
+  &-slide-right {
+    @extend .animate;
+  }
+
+  &-fade-in {
+    @include transition(opacity);
+
+    &.animated {
+      opacity: 1;
+    }
+  }
+
+  /* Specific animations */
+
+  &-slide-left {
+    transform: translateX(-50px);
+  }
+
+  &-slide-right {
+    transform: translateX(50px);
+  }
+
+  &-slide-left,
+  &-slide-right {
+    &.animated {
+      transform: translateX(0);
+    }
+  }
+
+  &-scale {
+    transform: scale(0.8);
+
+    &.animated {
+      transform: scale(1);
+    }
+  }
+}

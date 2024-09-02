@@ -29,17 +29,21 @@ so left colum and right column will be   100 each (200 both)
 */
 body {
   font-weight: 400;
-  line-height: 1.6;
-  // overflow-x: hidden;
   font-style: normal;
   font-family: var(--ff);
-  min-height: 100vh;
+
+  line-height: 1.6;
+
+  perspective: 1000px;
+
   padding-block: 24px;
 
-  padding-bottom: 69vh;
+  overflow-x: hidden;
+
   @include media(tablet) {
     padding-block: 40px;
   }
+
   @include media(desktop) {
     padding-block: 55px;
   }
@@ -105,7 +109,7 @@ picture {
   --gap: 20px;
   grid-template-columns:
     4px
-    repeat(3, calc((100% - 48px - (var(--gap) * 2)) / 3))
+    repeat(3, calc((100% - 48px - var(--gap) * 2) / 3))
     4px;
 
   column-gap: var(--gap);
@@ -119,7 +123,6 @@ picture {
       10px // space on left 10px + 30px gap
       repeat(6, calc((100% - 80px - var(--gap) * 5) / 6))
       10px; // space on right 10px + 30px gap
-    column-gap: var(--gap);
   }
 
   @include media(desktop) {
@@ -130,6 +133,5 @@ picture {
       1fr // take the remaining space
       repeat(12, calc((75rem - var(--gap) * 11) / 12))
       1fr; // take the remaining space
-    column-gap: var(--gap);
   }
 }

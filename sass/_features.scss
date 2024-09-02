@@ -1,0 +1,63 @@
+.features {
+  align-items: start;
+  row-gap: var(--space-med);
+  padding-top: var(--space-lg);
+
+  .feature {
+    display: grid;
+    place-items: center;
+
+    text-align: center;
+
+    grid-column: 2 / span 3;
+
+    @include media(tablet) {
+      text-align: left;
+      justify-items: start;
+
+      &:nth-child(even) {
+        grid-column: 5 / span 3;
+      }
+    }
+
+    @include media(desktop) {
+      &,
+      &:nth-child(even) {
+        grid-column-start: auto;
+      }
+
+      &:first-of-type {
+        grid-column-start: 2;
+      }
+    }
+
+    .icon {
+      height: 4.0625rem;
+      width: 4.0625rem;
+
+      margin-bottom: 48px;
+
+      background-color: var(--orange);
+      border-radius: 16px;
+
+      display: grid;
+      place-items: center;
+
+      img {
+        width: 2rem;
+        height: 2rem;
+        object-fit: contain;
+      }
+    }
+
+    h3 {
+      margin-bottom: 24px;
+      font-size: 1.6rem;
+      max-width: 14ch;
+    }
+
+    p {
+      text-wrap: balance;
+    }
+  }
+}
